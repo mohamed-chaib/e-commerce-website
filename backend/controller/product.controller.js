@@ -1,6 +1,6 @@
 import { redis } from "../lib/redis.js";
 import Product from "../models/product.model.js";
- import cloudinary from "../lib/cloudinary.js";
+import cloudinary from "../lib/cloudinary.js";
 
 export const getAllProducts = async (req, res) => {
   try {
@@ -59,7 +59,7 @@ export const createProduct = async (req, res) => {
 
 export const deleteProduct = async (req, res) => {
   try {
-    const product = Product.findByI(req.params.id);
+    const product = Product.findById(req.params.id);
     let cloudinaryresponse = null;
     if (!product) {
       return res.status(400).json({ message: "Product not found" });

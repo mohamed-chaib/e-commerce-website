@@ -37,6 +37,5 @@ export const adminRoute = async (req,res,next)=>{
      } catch (error) {
         console.log("error in admin route middleware : " + error.message);
         res.status(500).json({ message: error.message });
-        
     }
 } 

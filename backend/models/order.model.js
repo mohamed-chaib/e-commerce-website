@@ -1,5 +1,5 @@
 import mongoose from "mongoose";    
-import Product from "./product.model";
+import Product from "./product.model.js";
 const orderSchema = new mongoose.Schema({
     user:{
         type : mongoose.Schema.Types.ObjectId,
@@ -28,7 +28,7 @@ const orderSchema = new mongoose.Schema({
          required : true,
          min:0
     },
-    stripeSessionId:{
+    StripeSessionId:{ 
         type : String,
         unique :true
     }
@@ -36,5 +36,5 @@ const orderSchema = new mongoose.Schema({
     timestamps : true
 })
 
-const Order = mongoose.model("Order",orderSchema);
+const  Order = mongoose.model("Order",orderSchema);
 export default Order;
