@@ -15,7 +15,7 @@ const CouponSchema = new  mongoose.Schema({
         type : Date,
         required : true
     },
-    isActivate:{
+    isActive:{
         type : Boolean,
         default : true
     },
